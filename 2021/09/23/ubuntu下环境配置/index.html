@@ -18,7 +18,7 @@
   <meta name="author" content="chensihai">
   <meta name="keywords" content="">
   
-  <title>post title - notmad</title>
+  <title>ubuntu下环境配置 - notmad</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="post title">
+            <span class="h2" id="subtitle" title="ubuntu下环境配置">
               
             </span>
 
@@ -173,8 +173,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-08-03 23:21" pubdate>
-        2021年8月3日 晚上
+      <time datetime="2021-09-23 16:18" pubdate>
+        2021年9月23日 下午
       </time>
     </span>
   
@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      0 字
+      1.1k 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      14
        分钟
     </span>
   
@@ -225,10 +225,140 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">post title</h1>
+            <h1 style="display: none">ubuntu下环境配置</h1>
             
             <div class="markdown-body">
-              
+              <h1 id="ubuntu下环境配置"><a href="#ubuntu下环境配置" class="headerlink" title="ubuntu下环境配置"></a>ubuntu下环境配置</h1><h2 id="gcc"><a href="#gcc" class="headerlink" title="gcc"></a>gcc</h2><blockquote>
+<p>sudo apt update</p>
+</blockquote>
+<blockquote>
+<p>sudo apt install build-essential</p>
+</blockquote>
+<h2 id="yum"><a href="#yum" class="headerlink" title="yum"></a>yum</h2><blockquote>
+<p>sudo apt install yum</p>
+</blockquote>
+<h2 id="Eigen"><a href="#Eigen" class="headerlink" title="Eigen"></a>Eigen</h2><blockquote>
+<p>sudo apt install libeigen3-dev</p>
+</blockquote>
+<h2 id="cmake"><a href="#cmake" class="headerlink" title="cmake"></a>cmake</h2><h4 id="1-使用安装命令"><a href="#1-使用安装命令" class="headerlink" title="1.使用安装命令:"></a>1.使用安装命令:</h4><p>使用命令安装cmake和cmake-gui.</p>
+<blockquote>
+<p><strong>sudo apt install cmake</strong></p>
+<p><strong>sudo apt-get install cmake-qt-gui</strong></p>
+</blockquote>
+<h4 id="2-cmake源码编译"><a href="#2-cmake源码编译" class="headerlink" title="2.cmake源码编译"></a>2.cmake源码编译</h4><p>步骤：</p>
+<p><strong>step1. 官网下载合适的版本</strong></p>
+<p><a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://cmake.org/download/">https://cmake.org/download/</a></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/19677871-47f8427fa27343a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/898/format/webp" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><strong>step2. 下载后解压,然后进入目录执行:</strong></p>
+<blockquote>
+<p>**./bootstrap </p>
+<p>**</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/19677871-337a134462598b81.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/850/format/webp" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><strong>step3.编译:</strong></p>
+<blockquote>
+<p>**make -j 8 （这条命令可能会很耗费时间，需要有耐心）</p>
+<p>**</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/19677871-ca4d0e95d78955fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/884/format/webp" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><strong>step4.安装</strong></p>
+<blockquote>
+<p>**sudo make install</p>
+<p>**</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/19677871-228db7d99a3933a1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/791/format/webp" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h4 id="3-确认下版本是否已经更新："><a href="#3-确认下版本是否已经更新：" class="headerlink" title="3.确认下版本是否已经更新："></a><strong>3.确认下版本是否已经更新：</strong></h4><blockquote>
+<p>**#cmake –version</p>
+<p>**</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/19677871-ea4dbd94420ef200.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/779/format/webp" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>作者：水木369<br>链接：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/379f89355dc4">https://www.jianshu.com/p/379f89355dc4</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="opencv"><a href="#opencv" class="headerlink" title="opencv"></a>opencv</h2><p>Ubuntu16.04 配置OpenCV3.4.2及基本使用</p>
+<p>作者：OpenS_Lee</p>
+<p>1背景知识</p>
+<p>OpenCV是一个基于BSD许可（开源）发行的跨平台计算机视觉库，可以运行在Linux、Windows、Android和Mac OS操作系统上。它轻量级而且高效——由一系列 C 函数和少量 C++ 类构成，同时提供了Python、Ruby、MATLAB等语言的接口，实现了图像处理和计算机视觉方面的很多通用算法。</p>
+<p>OpenCV用C++语言编写，它的主要接口也是C++语言，但是依然保留了大量的C语言接口。该库也有大量的Python、Java and MATLAB/OCTAVE（版本2.5）的接口。这些语言的API接口函数可以通过在线文档获得。如今也提供对于C#、Ch、Ruby,GO的支持。</p>
+<p>所有新的开发和算法都是用C++接口。一个使用CUDA的GPU接口也于2010年9月开始实现</p>
+<p>2 Ubuntu16.04 配置OpenCV3.4.2</p>
+<p>OpenCV需求包：<br>GCC 4.4.x or later<br>CMake 2.8.7 or higher<br>Git<br>GTK+2.x or higher, including headers (libgtk2.0-dev)<br>pkg-config<br>Python 2.6 or later and Numpy 1.5 or later with developer packages (python-dev, python-numpy)<br>ffmpeg or libav development packages: libavcodec-dev, libavformat-dev, libswscale-dev<br>[optional] libtbb2 libtbb-dev<br>[optional] libdc1394 2.x<br>[optional] libjpeg-dev, libpng-dev, libtiff-dev, libjasper-dev, libdc1394-22-dev<br>[optional] CUDA Toolkit 6.5 or higher<br>在Opencv官网下载OpenCV3.4.2 Sources 网址链接：<a target="_blank" rel="noopener" href="https://opencv.org/releases.html">https://opencv.org/releases.html</a><br>  如果下载太慢可在“FPGA开源工作室”微信公众号回复“OpenCV”得到百度云盘链接。</p>
+<p>图1 OpenCV3.4.2 Sources</p>
+<ol start="2">
+<li> 将下载好的压缩包copy到Ubuntu系统下并解压缩。</li>
+</ol>
+<p>  unzip opencv-3.4.2.zip</p>
+<p> 进入到解压后的文件包中安装依赖库。<br>sudo apt-get install build-essential</p>
+<p>sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev</p>
+<p>sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev</p>
+<p> 安装cmake<br>sudo apt-get install cmake</p>
+<p>安装完cmake之后 ,创建编译文件夹build<br>mkdir build</p>
+<p>cd build</p>
+<p>执行cmake<br>cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..</p>
+<p>等待cmake命令执行完成然后执行make<br>sudo make</p>
+<p>sudo make install</p>
+<p>8.sudo make install 执行完毕后OpenCV编译过程就结束了，接下来就需要配置一些OpenCV的编译环境首先将OpenCV的库添加到路径，从而可以让系统找到</p>
+<p>sudo gedit /etc/ld.so.conf.d/opencv.conf </p>
+<p>执行此命令后打开的可能是一个空白的文件，不用管，只需要在文件末尾添加</p>
+<p>/usr/local/lib  </p>
+<p>9.执行如下命令使得刚才的配置路径生效</p>
+<p>sudo ldconfig  </p>
+<p>10.配置bash</p>
+<p>sudo gedit /etc/bash.bashrc  </p>
+<p>在最末尾添加</p>
+<p>PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig  </p>
+<p>export PKG_CONFIG_PATH  </p>
+<p>保存，执行如下命令使得配置生效</p>
+<p>source /etc/bash.bashrc  </p>
+<p>更新</p>
+<p>sudo updatedb</p>
+<p>OpenCV安装配置完成接下来我们建立一个小程序测试测试。</p>
+<p>1 建立一个display.cpp文件</p>
+<p> vi display.cpp</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;opencv2/opencv.hpp&gt;</p>
+<p>using namespace cv;</p>
+<p>int main(int argc, char** argv )</p>
+<p>{</p>
+<pre><code>if ( argc != 2 )
+
+&#123;
+
+    printf(&quot;usage: DisplayImage.out &lt;Image_Path&gt;\n&quot;);
+
+    return -1;
+
+&#125;
+
+Mat image;
+
+image = imread( argv[1], 1 );
+
+if ( !image.data )
+
+&#123;
+
+    printf(&quot;No image data \n&quot;);
+
+    return -1;
+
+&#125;
+
+namedWindow(&quot;Display Image&quot;, WINDOW_AUTOSIZE );
+
+imshow(&quot;Display Image&quot;, image);
+
+waitKey(0);
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>2 建立CMakeLists.txt</p>
+<p>Vi CMakeLists.txt</p>
+<p>运行cmake .<br>  cmake .</p>
+<p>运行make<br>  make</p>
+<p>运行./display  lena.png<br>  ./display  lena.png</p>
+<p>结果显示了一张lena.png图片。</p>
+<p>————————————————<br>版权声明：本文为CSDN博主「FPGA开源工作室」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/baidu_34971492/article/details/81665538">https://blog.csdn.net/baidu_34971492/article/details/81665538</a></p>
+
             </div>
             <hr>
             <div>
@@ -248,12 +378,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2021/09/23/%E9%99%88%E5%9B%9B%E6%B5%B7%E7%9A%84C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">陈四海的C++学习笔记</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/08/03/hello-world/">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2021/09/23/%E9%99%88%E5%9B%9B%E6%B5%B7%E7%9A%84RM%E8%A7%86%E8%A7%89%E5%93%B2%E5%AD%A6/">
+                        <span class="hidden-mobile">陈四海的RM视觉哲学</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

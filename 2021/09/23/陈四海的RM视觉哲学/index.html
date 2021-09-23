@@ -18,7 +18,7 @@
   <meta name="author" content="chensihai">
   <meta name="keywords" content="">
   
-  <title>Hello World - notmad</title>
+  <title>陈四海的RM视觉哲学 - notmad</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Hello World">
+            <span class="h2" id="subtitle" title="陈四海的RM视觉哲学">
               
             </span>
 
@@ -173,8 +173,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-08-03 23:07" pubdate>
-        2021年8月3日 晚上
+      <time datetime="2021-09-23 16:16" pubdate>
+        2021年9月23日 下午
       </time>
     </span>
   
@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      75 字
+      232 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      2
        分钟
     </span>
   
@@ -225,22 +225,65 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">陈四海的RM视觉哲学</h1>
             
             <div class="markdown-body">
-              <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+              <h1 id="陈四海的RM视觉哲学"><a href="#陈四海的RM视觉哲学" class="headerlink" title="陈四海的RM视觉哲学"></a>陈四海的RM视觉哲学</h1><h2 id="1-capture-gt-gt-src和capture-read-src"><a href="#1-capture-gt-gt-src和capture-read-src" class="headerlink" title="1.capture&gt;&gt;src和capture.read(src)"></a>1.capture&gt;&gt;src和capture.read(src)</h2><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>capture&gt;&gt;src</th>
+<th>capture.read(src)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>us</td>
+<td>205020</td>
+<td>204774</td>
+</tr>
+<tr>
+<td>ms</td>
+<td>205.02</td>
+<td>204.774</td>
+</tr>
+</tbody></table>
+<p>以前看其他人写的代码和文章，他们总说.read()会快一些，emmm，的确是快了一些250us左右（手动狗头），真TM的快</p>
+<h2 id="2-二值化"><a href="#2-二值化" class="headerlink" title="2.二值化"></a>2.二值化</h2><p>二值化主要有三个方法</p>
+<ul>
+<li><p>HSV</p>
+</li>
+<li><p>通道相减</p>
+</li>
+<li><p>通道相减的自定义形式</p>
+<p><strong>通道相减的自定义形式</strong>：吉林大学老哥的方法，直接通过对指针访问，免去了spilt等操作，在吉林大学的代码里写里写道</p>
+<blockquote>
+<p>pointer visits all the data of srcImg, the same to bgr channel split 通道相减法的自定义形式，利用指针访问，免去了split、substract和thresh操作，加速了1.7倍</p>
+</blockquote>
+<p><code>为啥我测出来感觉还慢了</code></p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HSV</th>
+<th>通道相减</th>
+<th>通道相减的自定义形式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>us</td>
+<td>7735</td>
+<td>3100</td>
+<td>3500</td>
+</tr>
+<tr>
+<td>ms</td>
+<td>7.735</td>
+<td>3.100</td>
+<td>3.500</td>
+</tr>
+</tbody></table>
 
             </div>
             <hr>
@@ -261,9 +304,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/08/03/post-title/">
+                      <a href="/2021/09/23/ubuntu%E4%B8%8B%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">post title</span>
+                        <span class="hidden-mobile">ubuntu下环境配置</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
