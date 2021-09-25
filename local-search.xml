@@ -4,6 +4,32 @@
   
   
   <entry>
+    <title>陈四海的hexo学习日记</title>
+    <link href="/2021/09/25/%E9%99%88%E5%9B%9B%E6%B5%B7%E7%9A%84hexo%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/"/>
+    <url>/2021/09/25/%E9%99%88%E5%9B%9B%E6%B5%B7%E7%9A%84hexo%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="编写文档"><a href="#编写文档" class="headerlink" title="编写文档"></a>编写文档</h2><p><code>hexo n  &quot;文档名&quot;</code>or <code>hexo new &quot;文档名&quot;</code></p><h2 id="在本地预览"><a href="#在本地预览" class="headerlink" title="在本地预览"></a>在本地预览</h2><p><code>hexo s </code>  == <code>hexo server</code></p><h1 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h1><p><code>hexo g</code> == <code>hexo generate</code></p><h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p><code>hexo d</code> == <code>hexo deploy</code></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>陈四海的pytorch学习日记</title>
+    <link href="/2021/09/25/%E9%99%88%E5%9B%9B%E6%B5%B7%E7%9A%84pytorch%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/"/>
+    <url>/2021/09/25/%E9%99%88%E5%9B%9B%E6%B5%B7%E7%9A%84pytorch%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>陈四海的C++学习笔记</title>
     <link href="/2021/09/23/%E9%99%88%E5%9B%9B%E6%B5%B7%E7%9A%84C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <url>/2021/09/23/%E9%99%88%E5%9B%9B%E6%B5%B7%E7%9A%84C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
