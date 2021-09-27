@@ -8,7 +8,7 @@
     <link href="/2021/09/26/Pytorch%E5%AE%89%E8%A3%85/"/>
     <url>/2021/09/26/Pytorch%E5%AE%89%E8%A3%85/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h2 id="conda常用命令"><a href="#conda常用命令" class="headerlink" title="conda常用命令"></a>conda常用命令</h2><p><strong>查看创建的房间</strong>：conda info –envs</p><h2 id="安装pytorch"><a href="#安装pytorch" class="headerlink" title="安装pytorch"></a>安装pytorch</h2><h3 id="激活pytorch房间"><a href="#激活pytorch房间" class="headerlink" title="激活pytorch房间"></a>激活pytorch房间</h3><p><strong>注意以管理员身份运行</strong></p><p><code>conda activate pytorch</code></p>]]></content>
     
     
     <categories>
