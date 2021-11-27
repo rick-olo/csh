@@ -197,7 +197,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.4k 字
+      1.9k 字
     </span>
   
 
@@ -207,7 +207,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      15
+      21
        分钟
     </span>
   
@@ -323,6 +323,65 @@
 <li>tanh:(-1,1)</li>
 <li>relu:max(0,x)</li>
 <li>ELU:a(e^x-1)</li>
+</ol>
+<h2 id="Pytorch入门使用"><a href="#Pytorch入门使用" class="headerlink" title="Pytorch入门使用"></a>Pytorch入门使用</h2><p><strong>目标</strong></p>
+<ol>
+<li>知道张量和pytorch中的张量</li>
+<li>知道pytorch中如何创建张量</li>
+<li>知道pytorch中的tensor的常见方法</li>
+<li>知道pytorch中tensor的数据类型</li>
+<li>知道pytorch中如何实现tensor在cpu和cuda中转化</li>
+</ol>
+<h3 id="张量Tensor"><a href="#张量Tensor" class="headerlink" title="张量Tensor"></a>张量Tensor</h3><p>张量是一个统称，其中包括很多类型：</p>
+<ol>
+<li>0阶张量：标量、常数、0-D Tensor</li>
+<li>1阶张量：向量 1-D Tensor</li>
+<li>2阶张量：矩阵 2-D Tensor</li>
+<li>3阶张量</li>
+<li>。。。</li>
+<li>N阶张量</li>
+</ol>
+<h3 id="Pytorch中创建张量"><a href="#Pytorch中创建张量" class="headerlink" title="Pytorch中创建张量"></a>Pytorch中创建张量</h3><ol>
+<li><p>使用python中的列表或者序列创建tensor</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">torch.tensor([[<span class="hljs-number">1.</span>,-<span class="hljs-number">1.</span>],[<span class="hljs-number">1.</span>,-<span class="hljs-number">1.</span>]])<br>tensor([[<span class="hljs-number">1.000</span>,-<span class="hljs-number">1.000</span>],[<span class="hljs-number">1.000</span>,-<span class="hljs-number">1.000</span>]])<br></code></pre></td></tr></table></figure></li>
+<li><p>使用numpy中数组创建tensor</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">torch.tensor(np.array([[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>]]))<br>tensor([[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>]])<br></code></pre></td></tr></table></figure></li>
+<li><p>使用torch的api创建tensor</p>
+<ol>
+<li><p><code>torch.empty(3,4)</code>创建3行4列的空的tensor，会用无用数据进行填充</p>
+</li>
+<li><p><code>torch.ones([3,4])</code>创建3行4列<strong>全为1</strong>的tensor</p>
+</li>
+<li><p><code>torch.zeros([3,4])</code>创建3行4列<strong>全为0</strong>的tensor</p>
+</li>
+<li><p><code>torch.rand([3,4])</code>创建3行4列的随机值的tensor，随机的区间是[0，1）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>torch.rand(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>)<br></code></pre></td></tr></table></figure></li>
+<li><p><code>torch.randint(low=0,high=10,size=[3,4])</code>创建3行4列的随机整数的tensor，随机值的区间是[low,high)</p>
+</li>
+<li><p>torch.randn([3,4])创建3行4列的随机数的tensor，随机值的分布式均值为0，方差为1</p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="pytorch中tenso的常用方法"><a href="#pytorch中tenso的常用方法" class="headerlink" title="pytorch中tenso的常用方法"></a>pytorch中tenso的常用方法</h3><ol>
+<li><p>获取tensor中的数据（当tensor中只有一个元素可用）：<code>tensor.item()</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">a =  torch.tensor(np.arange(<span class="hljs-number">1</span>))<br>a.item()<br></code></pre></td></tr></table></figure></li>
+<li><p>转化为numpy数组</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">z.numpy()<br></code></pre></td></tr></table></figure></li>
+<li><p>获取形状：<code>tensor.size()</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">x.size()<br></code></pre></td></tr></table></figure></li>
+<li><p>形状改变：<code>tensor.view((3,4))</code>,类似numpy中的reshape，是一种浅拷贝，仅仅是形状发生改变</p>
+</li>
+<li><p>获取维度数：<code>tensor.dim()</code></p>
+</li>
+<li><p>获取最大值：<code>tensor.max()</code></p>
+</li>
+<li><p>转置：<code>tensor.t()</code></p>
+</li>
+<li><p><code>tensor[1,3]</code>获取tensor中第一行第三列的值</p>
+</li>
+<li><p><code>tensor[1,3] = 100</code>对tensor中第一行第三列的位置进行赋值100</p>
+</li>
 </ol>
 
             </div>
